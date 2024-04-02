@@ -15,9 +15,19 @@ submitBtn.addEventListener('click', function(e){
 
 
 //  here we create a function which already called erliar on the above event, and store it to a variable. 
-const pushElement = function(item){               // now each function will have and item/data/value bydeafult, because previously we pass userData as an argument. 
-  const listItem = document.createElement('li')  // now creat a List item for each value/item/data we get whenever function run, & each list item will store to a variable
-  listItem.innerHTML = `${item}`                // after creating the list insert innerHtml to the list. every list item will store the item which we get pervioulsy through function.
-  listItem.style ="margin-bottom : 15px"       // add style to the list item
-  displayTasklist.appendChild(listItem)       // now append the cild item (which is List item, created earlier to add the ures input as a list item). 
+
+const pushElement = function(item){
+  const listItem = document.createElement('li')
+  listItem.classList.add('flex')
+  listItem.classList.add('justify-between')
+  listItem.classList.add('items-center')
+  listItem.classList.add('px-8')
+  listItem.classList.add('gap-12')
+  listItem.classList.add('tracking-wider')
+  listItem.innerHTML = `${item} <i class="ri-close-fill text-2xl font-bold text-white hover:text-red-700 cursor-pointer"></i>`
+  displayTasklist.appendChild(listItem)
+
+  listItem.querySelector('i').addEventListener('click', (item) => {
+    listItem.remove(item)
+  })
 }
