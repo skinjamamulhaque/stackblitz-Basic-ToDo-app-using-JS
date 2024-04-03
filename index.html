@@ -17,15 +17,17 @@
   </head>
   <body class="bg-slate-900 mt-10">
 
-    <div class="w-3/4 m-auto">
-      <form class="flex items-center justify-center flex-wrap gap-10 ">
-        <input type="text" placeholder="Enter your Task" class="px-5 py-2 rounded-md w-1/2 outline-none" id="input">
+    <div class="sm:w-3/4 m-auto">
+      <form class="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10">
+        <input type="text" placeholder="Enter your Task" class="px-5 py-2 rounded-md w-[19rem] sm:w-1/2 outline-none" id="input">
         <button class="border rounded px-5 py-1 text-white hover:bg-green-600 font-bold tracking-wider" id="button">Submit</button>
       </form>
              
-        <div class="flex flex-col text-white w-3/4 m-auto gap-10 mt-8 tracking-wider" id="display" >
+      <div class="flex flex-col text-white w-full sm:w-3/4 sm:m-auto gap-2 sm:gap-10 mt-4 sm:mt-8 tracking-wider" id="display" >
           <!-- user input list will apper here dynamically -->
-        </div></div>
+      </div>
+
+    </div>
    
 
 
